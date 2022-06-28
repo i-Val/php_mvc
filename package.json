@@ -1,0 +1,9 @@
+{
+    "author": "Iwuchukwu Valentine",
+    "description": "ecommerce store",
+    "private": true,
+    "dependencies":{
+        "gulp": "~3.9",
+        "laravel-elixir": "~5.0.0"
+    }
+}
