@@ -28,4 +28,5 @@ class RouteDispatcher
         view('errors/404');
     }
     }
+        
 }
