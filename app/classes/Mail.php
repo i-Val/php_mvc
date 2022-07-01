@@ -2,7 +2,10 @@
 
 namespace App\classes;
 
-use PHPMailer;
+//use PHPMailer;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
 class Mail
 {
@@ -24,7 +27,7 @@ class Mail
 
         $environment = $_ENV['APP_ENV'];
 
-        if($nvironment === 'local'){
+        if($environment === 'local'){
             $this->mail->SMTPDebug = 2;
         }
 
@@ -36,13 +39,14 @@ class Mail
         $this->mail->SingleTo = true;
 
         //sender info
-        $this->mail->From = $_ENV['ADMIN_EMAIL'];
+        $this->mail->From = $_ENV['EMAIL_USERNAME'];
         $this->mail->FromName = 'entropy';
     }
 
     public function send($data){
         $this->mail->addAddress($data['to'], $data['name']);
         $this->mail->Subject = $data['subject'];
-        $this->mail->Body = $body;
+        $this->mail->Body = make($data['view'], array('data'=> $data['body']));
+        return $this->mail->send();
     }
 }

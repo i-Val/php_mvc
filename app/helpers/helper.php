@@ -10,3 +10,21 @@ function view($path, array $data = []) {
 
     echo $blade->view()->make($path, $data)->render();
 }
+
+function make($filename, $data){
+    
+    extract($data);
+    //turn on output buffering
+    ob_start();
+
+    //include template
+    include('../resources/views/emails/' .$filename.'.php');
+    //get file content
+    $content = ob_get_contents();
+    //erase the output turn off output buffering
+    ob_end_clean();
+
+    return $content;
+}
+
+
