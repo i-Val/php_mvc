@@ -1,6 +1,6 @@
 <?php
 $router = new AltoRouter;
-$router->map('GET', '/ecommerce/about', 'App\Controllers\IndexController@show', 'home');
+$router->map('GET', '/ecommerce/home', 'App\Controllers\IndexController@show', 'home');
 $router = new AltoRouter;
 $router->map('GET', '/ecommerce/admin', 'App\Controllers\admin\DashboardController@show', 'home');
 // $match = $router->match();
