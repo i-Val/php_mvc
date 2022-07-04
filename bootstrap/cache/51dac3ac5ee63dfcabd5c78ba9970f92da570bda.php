@@ -1,9 +1,8 @@
 <h1>Admin dashboard</h1>
-<?php echo \App\classes\CSRFToken::_token(); ?>
+<form action="/ecommerce/admin" method="post" enctype="multipart/form-data">
+    <input type="text" name="product" value="testing">
+    <input type="file" name="image">
+    <input type="submit" value="Go" name="submit">
+</form>
 
-<br/>
-<?php echo \App\classes\Session::get('token'); ?>
-
-<?php echo \App\classes\Redirect::back(); ?>
-
-<?php echo $_SERVER['REQUEST_URI']; ?><?php /**PATH C:\walexbizhost\htdocs\ecommerce\resources\views/admin/dashboard.blade.php ENDPATH**/ ?>
+<?php echo e(\App\Classes\Request::all()); ?><?php /**PATH C:\walexbizhost\htdocs\ecommerce\resources\views/admin/dashboard.blade.php ENDPATH**/ ?>

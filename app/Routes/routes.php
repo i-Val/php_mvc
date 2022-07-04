@@ -2,7 +2,8 @@
 $router = new AltoRouter;
 $router->map('GET', '/ecommerce/home', 'App\Controllers\IndexController@show', 'home');
 $router = new AltoRouter;
-$router->map('GET', '/ecommerce/admin', 'App\Controllers\admin\DashboardController@show', 'home');
+$router->map('GET', '/ecommerce/admin', 'App\Controllers\admin\DashboardController@show', 'admin_dashboard');
+$router->map('POST', '/ecommerce/admin', 'App\Controllers\admin\DashboardController@get', 'admin');
 // $match = $router->match();
 // if($match){
     
