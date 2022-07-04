@@ -54,7 +54,7 @@ class FileUpload
         return true;
     }
 
-    //get path where file was uploaded to
+    //get path where file was uploaded
     public function path()
     {
         return $this->path;
