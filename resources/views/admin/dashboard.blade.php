@@ -1,2 +1,4 @@
 <h1>Admin dashboard</h1>
-{{$admin}}
+{!! \App\classes\CSRFToken::_token() !!}
+<br/>
+{!! \App\classes\Session::get('token') !!}
