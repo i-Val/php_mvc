@@ -4,7 +4,10 @@
         "altorouter/altorouter": "^2.0",
         "philo/laravel-blade": "^3.1",
         "illuminate/database": "^5.4",
-        "phpmailer/phpmailer": "^6.6"
+        "phpmailer/phpmailer": "^6.6",
+        "voku/pagination": "^4.0",
+        "nesbot/carbon": "^2.59",
+        "stripe/stripe-php": "^8.11"
     },
     "require-dev":{
         "filp/whoops": "^2.14"
